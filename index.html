@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediScan - Medication Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("image.jpg");
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .high-contrast {
+            background-color: black;
+            color: white;
+        }
+        .history-log {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        .contact-info {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        .control-button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #1a73e8;
+            color: white;
+        }
+        .control-button:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="color: aliceblue;">MediScan - Voice-Controlled Medication Scanner</h1>
+    
+    <!-- New Buttons -->
+    <button id="cameraButton">Access Camera</button>
+    <button id="microphoneButton">Access Microphone</button>
+    
+    <video id="cameraFeed" autoplay playsinline></video>
+    <canvas id="cameraCanvas" style="display: none;"></canvas>
+    
+    <div id="outputText" class="medication-box"></div>
+
+    <div class="history-log">
+        <h2>Scan History</h2>
+        <ul id="historyList"></ul>
+        <button onclick="clearHistory()">Clear History</button>
+    </div>
+    
+    <div class="contact-info">
+        <h2>Contact HTM Pharmacy</h2>
+        <p>HTM PHARMACY (By HOOIT MART SDN. BHD.) [978673-A]</p>
+        <p>Headquarter (Warehouse): 3, Persiaran Kilang, Kawasan Perindustrian Jelapang, 30100 Ipoh, Perak</p>
+        <p>Email: <a href="mailto:inquiry@htmpharmacy.my">inquiry@htmpharmacy.my</a></p>
+        <p>Contact: <a href="tel:+601137581642">+6011 375 81642</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4"></script>
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

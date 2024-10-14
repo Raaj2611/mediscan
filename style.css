@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightskyblue;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cameraFeed {
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#outputText {
+    background-color: grey;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #outputText {
+        font-size: 16px;
+    }
+}
+
+.medication-box {
+    border: 2px solid #1a73e8;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #1a73e8;
+}
+
+.medication-box .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.medication-box .detail {
+    margin-bottom: 8px;
+}
+
+#ocrResult {
+    padding-top: 20px;
+}
